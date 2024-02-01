@@ -1,5 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --table-font-color: #4b5c68;
+  --table-cell-font-size: 14px;
+  --table-bold-cell-font-size: 16px;
+
+  --table-header-font-size: 12px;
+  --table-header-height: 40px;
+  --table-header-background-color: #e4edf2;
+
+  --table-row-even-background-color: #f6f7f7;
+
+  --score-width: 20px;
+  --divider-width: 10px;
+
+  --flag-width: 53px;
+  --flag-height: 37px;
+}
+
+* {
+  min-width: 0;
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  min-height: 100dvh;
+  font-family: 'Open Sans', sans-serif;
+}
+
+img,
+video,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--table-font-color);
+}
+
+th {
+  height: var(--table-header-height);
+  background-color: var(--table-header-background-color);
+  font-size: var(--table-header-font-size);
+  padding: 0 10px;
+  font-weight: 600;
+}
+
+tr:nth-child(odd) {
+  background-color: var(--table-row-background-color);
+}
+
+td {
+  border-bottom: 1px solid #e4edf2;
+  font-size: var(--table-cell-font-size);
+  height: 70px;
+  padding: 0 10px;
+}
+
+td strong {
+  font-size: var(--table-bold-cell-font-size);
+  font-weight: bold;
 }
